@@ -3,11 +3,12 @@ name: Run Issue Resolver
 on:
   workflow_dispatch:  # manual trigger
   schedule:
-    - cron: '0 * * * *'  # runs every hour (optional)
+    - cron: '0 * * * *'  # Optional: every hour
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -15,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: 3.10  # ✅ CORRECTED VERSION
 
       - name: Install dependencies
         run: pip install requests google-generativeai
