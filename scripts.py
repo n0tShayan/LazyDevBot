@@ -4,7 +4,7 @@ import os
 import time
 
 # CONFIGURATION — replace with your actual tokens
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN") or "your_github_token_here"
+PA_TOKEN = os.getenv("PA_TOKEN") or "your_PA_TOKEN_here"
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or "your_gemini_api_key_here"
 
 # Your GitHub repo: "owner/repo"
@@ -14,7 +14,7 @@ REPO_NAME = "owner/repository"
 
 # GitHub API headers
 headers = {
-    "Authorization": f"token {GITHUB_TOKEN}",
+    "Authorization": f"token {PA_TOKEN}",
     "Accept": "application/vnd.github+json"
 }
 
